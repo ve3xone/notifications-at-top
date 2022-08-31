@@ -7,7 +7,6 @@ using System.Windows.Forms;
 using topright;
 using TopRightForms.Properties;
 
-
 namespace TopRightForms
 {
     public partial class Form1 : Form
@@ -38,6 +37,7 @@ namespace TopRightForms
                 while (true)
                 {
                     hwnd = FindWindow("Windows.UI.Core.CoreWindow", Language.LastWindowName);
+
                     //Hides the notification
                     //ShowWindow(hwnd, 0);
 
