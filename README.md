@@ -5,8 +5,6 @@ Move windows 11 / 10 notifications to the top of the screen.
 
 
 # Usage
-- Download the latest release from [here](https://github.com/SamarthCat/notifications-at-top/releases/latest)
-
 - Run ``` topright.exe ``` for the top right
 
 - Add a shortcut to it in ``` %appdata%\Microsoft\Windows\Start Menu\Programs\Startup ``` if you want it to run on boot
