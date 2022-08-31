@@ -14,16 +14,12 @@ namespace TopRightForms
     {
         [DllImport("user32.dll", SetLastError = true)]
         static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
-
-        [DllImport("user32.dll")]
-        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-
+        //[DllImport("user32.dll")]
+        //static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
         [DllImport("user32.dll", EntryPoint = "SetWindowPos")]
         public static extern IntPtr SetWindowPos(IntPtr hWnd, int hWndInsertAfter, int x, int Y, int cx, int cy, int wFlags);
-
         [DllImport("user32.dll")]
         public static extern bool GetWindowRect(IntPtr hwnd, ref Rectangle rectangle);
-
         const short SWP_NOMOVE = 0X2;
         const short SWP_NOSIZE = 1;
         const short SWP_NOZORDER = 0X4;
@@ -78,19 +74,30 @@ namespace TopRightForms
             notifyIcon1.Visible = true;
             notifyIcon1.Text = "Topright";
             notifyIcon1.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip();
-            notifyIcon1.ContextMenuStrip.Items.Add("TopRight", null, (object sender, EventArgs e) => { TopTaskbar = false; MiniTaskbar = false; });
-            notifyIcon1.ContextMenuStrip.Items.Add("TopRight_TopTaskbar", null, (object sender, EventArgs e) => { TopTaskbar = true; MiniTaskbar = false; });
-            notifyIcon1.ContextMenuStrip.Items.Add("TopRight_TopMiniTaskbar", null, (object sender, EventArgs e) => { TopTaskbar = true; MiniTaskbar = true; });
-            notifyIcon1.ContextMenuStrip.Items.Add("Exit", null, (object sender, EventArgs e) =>
+            notifyIcon1.ContextMenuStrip.Items.Add("TopRight", null, ContextMenu_TopRight);
+            notifyIcon1.ContextMenuStrip.Items.Add("TopRight_TopTaskbar", null, ContextMenu_TopRight_TopTaskbar);
+            notifyIcon1.ContextMenuStrip.Items.Add("TopRight_TopMiniTaskbar", null, ContextMenu_TopRight_TopMiniTaskbar);
+            notifyIcon1.ContextMenuStrip.Items.Add("Exit", null, Exit);
+        }
+        private void Exit(object sender, EventArgs e)
+        {
+            try
             {
                 Process.Start(new ProcessStartInfo
                 {
-                    FileName = "taskkill",
-                    Arguments = $"/f /im TopRightForms.exe",
+                    FileName = @"C:\Windows\System32\taskkill.exe",
+                    Arguments = $"/PID {Process.GetCurrentProcess().Id} /F",
                     WindowStyle = ProcessWindowStyle.Hidden,
                     CreateNoWindow = true
                 });
-            });
+            }
+            catch
+            {
+
+            }
         }
+        private void ContextMenu_TopRight(object sender, EventArgs e){ TopTaskbar = false; MiniTaskbar = false; }
+        private void ContextMenu_TopRight_TopTaskbar(object sender, EventArgs e) { TopTaskbar = true; MiniTaskbar = false; }
+        private void ContextMenu_TopRight_TopMiniTaskbar(object sender, EventArgs e) { TopTaskbar = true; MiniTaskbar = true; }
     }
 }
