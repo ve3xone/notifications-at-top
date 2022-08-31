@@ -81,20 +81,14 @@ namespace TopRightForms
         }
         private void Exit(object sender, EventArgs e)
         {
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = @"C:\Windows\System32\taskkill.exe",
-                    Arguments = $"/PID {Process.GetCurrentProcess().Id} /F",
-                    WindowStyle = ProcessWindowStyle.Hidden,
-                    CreateNoWindow = true
-                });
-            }
-            catch
-            {
-
-            }
+            notifyIcon1.Visible = false;
+            Process.Start(new ProcessStartInfo
+             {
+                 FileName = @"C:\Windows\System32\taskkill.exe",
+                 Arguments = $"/PID {Process.GetCurrentProcess().Id} /F",
+                 WindowStyle = ProcessWindowStyle.Hidden,
+                 CreateNoWindow = true
+             });
         }
         private void ContextMenu_TopRight(object sender, EventArgs e){ TopTaskbar = false; MiniTaskbar = false; }
         private void ContextMenu_TopRight_TopTaskbar(object sender, EventArgs e) { TopTaskbar = true; MiniTaskbar = false; }
