@@ -4,7 +4,6 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 using topright;
-
 public class Program
 {
 
@@ -54,7 +53,6 @@ public class Program
         NotifyRect.Height = NotifyRect.Height - NotifyRect.Y;
 
         //50PX Y offset to make the spacing even
-        SetWindowPos(hwnd, 0, Screen.PrimaryScreen.Bounds.Width - NotifyRect.Width, -50, 0, 0,
-            SWP_NOSIZE | SWP_NOZORDER | SWP_SHOWWINDOW);
+        SetWindowPos(hwnd, 0, Screen.PrimaryScreen.Bounds.Width - NotifyRect.Width, -50, 0, 0, SWP_NOSIZE | SWP_NOZORDER | SWP_SHOWWINDOW);
     }
 }
