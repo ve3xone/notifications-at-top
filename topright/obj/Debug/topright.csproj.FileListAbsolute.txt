@@ -1,6 +1,0 @@
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\topright\bin\Debug\topright.exe
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\topright\bin\Debug\topright.pdb
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\topright\obj\Debug\topright.csproj.CoreCompileInputs.cache
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\topright\obj\Debug\topright.exe
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\topright\obj\Debug\topright.pdb
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\topright\bin\Debug\topright.exe.config

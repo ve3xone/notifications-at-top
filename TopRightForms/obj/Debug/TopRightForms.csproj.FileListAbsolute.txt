@@ -1,9 +1,0 @@
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\TopRightForms\bin\Debug\TopRightForms.exe.config
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\TopRightForms\bin\Debug\TopRightForms.exe
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\TopRightForms\bin\Debug\TopRightForms.pdb
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\TopRightForms\obj\Debug\TopRightForms.Form1.resources
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\TopRightForms\obj\Debug\TopRightForms.Properties.Resources.resources
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\TopRightForms\obj\Debug\TopRightForms.csproj.GenerateResource.cache
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\TopRightForms\obj\Debug\TopRightForms.csproj.CoreCompileInputs.cache
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\TopRightForms\obj\Debug\TopRightForms.exe
-C:\Users\ve3xone\Desktop\Github\notifications-at-top\TopRightForms\obj\Debug\TopRightForms.pdb
